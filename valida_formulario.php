@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recupere os dados do formulário
     $nome = htmlspecialchars($_POST["nome"]);
-    $numeroUsuario = htmlspecialchars($_POST["numero_usuario"]);
+    $telefone = htmlspecialchars($_POST["telefone"]);
     $avaliacao = htmlspecialchars($_POST["avaliacao"]);
 
     // Faça o que quiser com os dados, como salvá-los no banco de dados
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Exemplo simples de exibição dos resultados
     echo "<h1>Avaliação Recebida</h1>";
     echo "<p>Nome: $nome</p>";
-    echo "<p>Número do Usuário: $numeroUsuario</p>";
+    echo "<p>Número do Usuário: $telefone</p>";
     echo "<p>Avaliação: $avaliacao estrela(s)</p>";
 } else {
     // Redirecione para a página inicial se o formulário não for enviado corretamente
