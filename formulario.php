@@ -1,3 +1,4 @@
+<!-- formulario.php -->
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -5,58 +6,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Avaliação</title>
-    <style>
-        .rating {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-
-        .rating input {
-            display: none;
-        }
-
-        .rating label {
-            cursor: pointer;
-            width: 30px;
-            height: 30px;
-            background-color: #ddd;
-            margin: 0 4px;
-            text-align: center;
-            line-height: 30px;
-        }
-
-        .rating input:checked+label,
-        .rating input:checked~label:hover,
-        .rating input:checked~label:hover~label {
-            background-color: #f90;
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/a7fd021888.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <h1>Formulário de Avaliação</h1>
-    <form action="processar_formulario.php" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required>
+    <form action="valida_formulario.php" method="post">
+        <div class="form-control">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" disabled>
+        </div>
 
-        <label for="numero_usuario">Número do Usuário:</label>
-        <input type="number" name="numero_usuario" required>
+        <div class="form-control">
+            <label for="telefone">Telefone:</label>
+            <input type="text" name="telefone" id="telefone" placeholder="Digite o telefone do usuário" disabled>
+        </div>
 
-        <p>Avaliação:</p>
-        <div class="rating">
-            <input type="radio" id="estrela5" name="avaliacao" value="5">
-            <label for="estrela5">5</label>
-            <input type="radio" id="estrela4" name="avaliacao" value="4">
-            <label for="estrela4">4</label>
-            <input type="radio" id="estrela3" name="avaliacao" value="3">
-            <label for="estrela3">3</label>
-            <input type="radio" id="estrela2" name="avaliacao" value="2">
-            <label for="estrela2">2</label>
-            <input type="radio" id="estrela1" name="avaliacao" value="1">
-            <label for="estrela1">1</label>
+        <div class="rating-container">
+            <p>Avaliação:</p>
+            <div class="rating">
+                <input type="radio" id="estrela5" name="avaliacao" value="5">
+                <label for="estrela5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="estrela4" name="avaliacao" value="4">
+                <label for="estrela4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="estrela3" name="avaliacao" value="3">
+                <label for="estrela3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="estrela2" name="avaliacao" value="2">
+                <label for="estrela2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="estrela1" name="avaliacao" value="1">
+                <label for="estrela1"><i class="fas fa-star"></i></label>
+            </div>
+
         </div>
 
         <input type="submit" value="Enviar Avaliação">
+        <script src="index.js"></script>
     </form>
 </body>
 

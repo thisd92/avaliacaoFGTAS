@@ -15,12 +15,12 @@
     <form action="valida_formulario.php" method="post">
         <div class="form-control">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" required>
+            <input type="text" name="nome" id="nome" disabled>
         </div>
 
         <div class="form-control">
             <label for="telefone">Telefone:</label>
-            <input type="text" name="telefone" id="telefone" placeholder="Digite o telefone do usuário" required>
+            <input type="text" name="telefone" id="telefone" placeholder="Digite o telefone do usuário" disabled>
         </div>
 
         <div class="rating-container">
@@ -41,24 +41,7 @@
         </div>
 
         <input type="submit" value="Enviar Avaliação">
-
-        <script>
-            // Função para adicionar a máscara de telefone
-            function formatarTelefone() {
-                var inputTelefone = document.getElementById('telefone');
-                var valor = inputTelefone.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
-
-                if (valor.length > 0) {
-                    // Adiciona a máscara
-                    valor = '(' + valor.substring(0, 2) + ') ' + valor.substring(2, 7) + '-' + valor.substring(7, 11);
-                }
-
-                inputTelefone.value = valor;
-            }
-
-            // Adiciona um listener para o evento de input
-            document.getElementById('telefone').addEventListener('input', formatarTelefone);
-        </script>
+        <script src="index.js"></script>
     </form>
 </body>
 
