@@ -14,30 +14,59 @@
     <h1>Formulário de Avaliação</h1>
     <form action="valida_formulario.php" method="post">
         <div class="form-control">
+            <label for="agencia">Agencia</label>
+            <input type="text" name="agencia" id="agencia" readonly>
+        </div>
+        <div class="form-control">
             <label for="nome">Nome:</label>
-            <input type="text" name="nome" id="nome" disabled>
+            <input type="text" name="nome" id="nome" readonly>
         </div>
 
         <div class="form-control">
             <label for="telefone">Telefone:</label>
-            <input type="text" name="telefone" id="telefone" placeholder="Digite o telefone do usuário" disabled>
+            <input type="text" name="telefone" id="telefone" readonly>
         </div>
 
         <div class="rating-container">
-            <p>Avaliação:</p>
-            <div class="rating">
-                <input type="radio" id="estrela5" name="avaliacao" value="5">
-                <label for="estrela5"><i class="fas fa-star"></i></label>
-                <input type="radio" id="estrela4" name="avaliacao" value="4">
-                <label for="estrela4"><i class="fas fa-star"></i></label>
-                <input type="radio" id="estrela3" name="avaliacao" value="3">
-                <label for="estrela3"><i class="fas fa-star"></i></label>
-                <input type="radio" id="estrela2" name="avaliacao" value="2">
-                <label for="estrela2"><i class="fas fa-star"></i></label>
-                <input type="radio" id="estrela1" name="avaliacao" value="1">
-                <label for="estrela1"><i class="fas fa-star"></i></label>
+            <h3>Avaliação o atendimento recebido na agência FGTAS/SINE:</h3>
+            <div class="av-container" id="atendimento">
+                <div class="title-container">
+                    <span class="title">Atendimento</span>
+                </div>
+                <div class="rating">
+                    <input type="radio" id="estrela5" name="av-atendimento" value="5">
+                    <label for="estrela5"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="estrela4" name="av-atendimento" value="4">
+                    <label for="estrela4"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="estrela3" name="av-atendimento" value="3">
+                    <label for="estrela3"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="estrela2" name="av-atendimento" value="2">
+                    <label for="estrela2"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="estrela1" name="av-atendimento" value="1">
+                    <label for="estrela1"><i class="fas fa-star"></i></label>
+                </div>
             </div>
-
+            <div class="av-container" id="tempo">
+                <div class="title-container">
+                    <span class="title">Tempo de espera</span>
+                </div>
+                <div class="rating">
+                    <input type="radio" id="av5" name="av-tempo" value="5">
+                    <label for="av5"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="av4" name="av-tempo" value="4">
+                    <label for="av4"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="av3" name="av-tempo" value="3">
+                    <label for="av3"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="av2" name="av-tempo" value="2">
+                    <label for="av2"><i class="fas fa-star"></i></label>
+                    <input type="radio" id="av1" name="av-tempo" value="1">
+                    <label for="av1"><i class="fas fa-star"></i></label>
+                </div>
+            </div>
+        </div>
+        <div class="av-container feedback">
+            <label for="feedback">Nos dê o seu feedback sobre nosso atendimento</label>
+            <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
         </div>
 
         <input type="submit" value="Enviar Avaliação">

@@ -17,10 +17,12 @@ document.getElementById('telefone').addEventListener('input', formatarTelefone);
 // Função para preencher automaticamente os campos Nome e Telefone com parâmetros da URL
 function preencherCamposDaURL() {
     const urlParams = new URLSearchParams(window.location.search);
+    const agParam = urlParams.get('agencia');
     const nomeParam = urlParams.get('nome');
     const telefoneParam = urlParams.get('telefone');
 
-    if (nomeParam && telefoneParam) {
+    if (agParam && nomeParam && telefoneParam) {
+        document.getElementById('agencia').value = agParam;
         document.getElementById('nome').value = nomeParam;
         document.getElementById('telefone').value = telefoneParam;
     }
