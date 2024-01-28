@@ -1,14 +1,48 @@
-/* style.css */
+form {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f2f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #113978;
+    font-weight: 600;
+}
 
 .rating-container {
     display: flex;
     flex-direction: column;
-    width: 300px;
-
+    width: 100%;
 }
 
-.rating-container p{
+.rating-container h3 {
     text-align: center;
+    color: #113978;
+}
+
+.title-container {
+    text-align: center;
+}
+
+.av-container {
+    margin-bottom: 10px;
+    color: #113978;
+}
+
+.rating-container span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #113978;
 }
 
 .rating {
@@ -24,7 +58,6 @@
 .rating label {
     cursor: pointer;
     font-size: 36px;
-    /* Tamanho do ícone */
     color: #ddd;
 }
 
@@ -32,4 +65,23 @@
 .rating input:hover~label,
 .rating label:hover {
     color: #f90;
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f1;
+    /* Cor de fundo geral */
+}
+
+h1 {
+    color: #113978;
+    text-align: center;
 }

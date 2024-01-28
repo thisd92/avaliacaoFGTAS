@@ -1,0 +1,76 @@
+/* Estilos Gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #113978;
+    text-align: center;
+}
+
+/* Estilos para index.php (Formulário de Envio) */
+
+form {
+    background-color: #f0f2f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    /* Centraliza o formulário */
+    max-width: 40%;
+    /* Limita a largura a 50% da viewport */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #113978;
+    color: #f0f2f1;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #09234d;
+}
+
+/* Estilos para confirmacao_envio.php (Página de Confirmação) */
+
+body.confirmacao {
+    background-color: #f0f2f1;
+}
+
+.confirmacao-container {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Estilos para valida_formulario.php (Página de Validação) */
+
+body.validacao {
+    background-color: #f0f2f1;
+}
+
+.validacao-container {
+    text-align: center;
+    padding: 50px;
+    color: #113978;
+}
